@@ -1,0 +1,390 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/fonts/Roboto-VariableFont_wdth,wght.ttf) format('truetype');
+}
+
+@theme {
+  /* Defaults for some font settings */
+  --font-sans: Roboto, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --tw-leading: 1;
+  --text-xs--line-height: 1;
+  --text-sm--line-height: 1;
+  --text-md--line-height: 1;
+  --text-xl--line-height: 1;
+  --text-2xl--line-height: 1;
+
+  /* Defaults for transitions */
+  --tw-delay: 0;
+  --default-transition-delay: var(--tw-delay);
+  --tw-duration: 1000;
+  --default-transition-duration: var(--tw-duration);
+
+  /* The Rainbow (+ Pink, Purple, and Gray) according to standard CSS =) */
+  --color-red: #ff0000;
+  --color-orange: #ffa500;
+  --color-yellow: #ffff00;
+  --color-green: #008000;
+  --color-blue: #0000ff;
+  --color-indigo: #4b0082;
+  --color-violet: #ee82ee;
+  --color-pink: #ffc0cb;
+  --color-purple: #800080;
+  --color-gray: #808080;
+
+  /*
+   * Mycolor.space
+   *
+   */
+
+  /* Red */
+  --color-1: #760000;
+  --color-2: #860000;
+  --color-3: #960000;
+  --color-4: #9c0000;
+  --color-5: #b80000;
+  --color-6: #db0000;
+  --color-7: #f50000;
+  --color-8: #ff0000;
+  --color-9: #ff5159;
+
+  /* Purple */
+  --color-1: #1f0660;
+  --color-2: #7652b4;
+  --color-3: #845EC2;
+  --color-4: #a178df;
+  --color-5: #be93fd;
+  --color-6: #dcb0ff;
+  --color-7: #f3c5ff;
+  --color-8: #faccff;
+  --color-9: #ffe4ff;
+
+  /* Old color variables */
+  /* --color-text_org: #ffffffde;
+  --color-text-hover_org: #2563eb;
+  --color-page-bg_old: #18181a;
+  --color-content-bg_old: #242424;
+  --color-main-content-bg_old: #212121; */
+
+  /* Theme base colors */
+    --color-body-bg: #0f0f0f;
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #007bff;
+    --color-link-hover: #0056b3;
+    --color-page-bg: #0f0f0f;
+    --color-content-bg: #1a1a1a;
+    --color-main-content-bg: #242424;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #007bff;
+    --color-button-bg-hover: #0056b3;
+    --color-button-outline: #007bff;
+    --color-button-text: #f0f0f0;
+}
+
+@layer base {
+  [data-theme='Default'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #007bff;
+    --color-link-hover: #0056b3;
+    --color-page-bg: #0f0f0f;
+    --color-content-bg: #1a1a1a;
+    --color-main-content-bg: #242424;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #007bff;
+    --color-button-bg-hover: #0056b3;
+    --color-button-outline: #007bff;
+    --color-button-text: #f0f0f0;
+  }
+
+  [data-theme='Red'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #ff0000;
+    --color-link-hover: #db0000;
+    --color-page-bg: #760000;
+    --color-content-bg: #860000;
+    --color-main-content-bg: #960000;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #760000;
+    --color-button-bg: #ff0000;
+    --color-button-bg-hover: #db0000;
+    --color-button-outline: #ff0000;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #8b0000;
+    --color-secondary: #a52a2a;
+    --color-tertiary: #b22222;
+    --color-quaternary: #dc143c;
+    --color-quinary: #dc143c;
+  }
+
+  [data-theme='Orange'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #cd853f;
+    --color-link-hover: #daa520;
+    --color-page-bg: #8b4513;
+    --color-content-bg: #a0522d;
+    --color-main-content-bg: #d2691e;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #cd853f;
+    --color-button-bg-hover: #daa520;
+    --color-button-outline: #cd853f;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #8b4513;
+    --color-secondary: #a0522d;
+    --color-tertiary: #d2691e;
+    --color-quaternary: #cd853f;
+    --color-quinary: #daa520;
+  }
+
+  [data-theme='Yellow'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #f0e68c;
+    --color-link-hover: #ffd700;
+    --color-page-bg: #8b8000;
+    --color-content-bg: #bdb76b;
+    --color-main-content-bg: #eee8aa;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #f0e68c;
+    --color-button-bg-hover: #ffd700;
+    --color-button-outline: #f0e68c;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #8b8000;
+    --color-secondary: #bdb76b;
+    --color-tertiary: #eee8aa;
+    --color-quaternary: #f0e68c;
+    --color-quinary: #ffd700;
+  }
+
+  [data-theme='Green'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #3cb371;
+    --color-link-hover: #6b8e23;
+    --color-page-bg: #006400;
+    --color-content-bg: #228b22;
+    --color-main-content-bg: #2e8b57;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #3cb371;
+    --color-button-bg-hover: #6b8e23;
+    --color-button-outline: #3cb371;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #006400;
+    --color-secondary: #228b22;
+    --color-tertiary: #2e8b57;
+    --color-quaternary: #3cb371;
+    --color-quinary: #6b8e23;
+  }
+
+  [data-theme='Blue'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #6495ed;
+    --color-link-hover: #1e90ff;
+    --color-page-bg: #00008b;
+    --color-content-bg: #2f4f4f;
+    --color-main-content-bg: #4682b4;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #6495ed;
+    --color-button-bg-hover: #1e90ff;
+    --color-button-outline: #6495ed;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #00008b;
+    --color-secondary: #2f4f4f;
+    --color-tertiary: #4682b4;
+    --color-quaternary: #6495ed;
+    --color-quinary: #1e90ff;
+  }
+
+  [data-theme='Indigo'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #8a2be2;
+    --color-link-hover: #9370db;
+    --color-page-bg: #483d8b;
+    --color-content-bg: #6a5acd;
+    --color-main-content-bg: #7b68ee;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #8a2be2;
+    --color-button-bg-hover: #9370db;
+    --color-button-outline: #8a2be2;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #483d8b;
+    --color-secondary: #6a5acd;
+    --color-tertiary: #7b68ee;
+    --color-quaternary: #8a2be2;
+    --color-quinary: #9370db;
+  }
+
+  [data-theme='Violet'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #9932cc;
+    --color-link-hover: #ba55d3;
+    --color-page-bg: #4b0082;
+    --color-content-bg: #800080;
+    --color-main-content-bg: #9400d3;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #9932cc;
+    --color-button-bg-hover: #ba55d3;
+    --color-button-outline: #9932cc;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #4b0082;
+    --color-secondary: #800080;
+    --color-tertiary: #9400d3;
+    --color-quaternary: #9932cc;
+    --color-quinary: #ba55d3;
+  }
+
+  [data-theme='Pink'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #e0115f;
+    --color-link-hover: #ff69b4;
+    --color-page-bg: #8b3a62;
+    --color-content-bg: #c71585;
+    --color-main-content-bg: #db7093;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #e0115f;
+    --color-button-bg-hover: #ff69b4;
+    --color-button-outline: #e0115f;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #8b3a62;
+    --color-secondary: #c71585;
+    --color-tertiary: #db7093;
+    --color-quaternary: #e0115f;
+    --color-quinary: #ff69b4;
+  }
+
+  [data-theme='Purple'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #9370db;
+    --color-link-hover: #a020f0;
+    --color-page-bg: #580f41;
+    --color-content-bg: #663399;
+    --color-main-content-bg: #800080;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #9370db;
+    --color-button-bg-hover: #a020f0;
+    --color-button-outline: #9370db;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #580f41;
+    --color-secondary: #663399;
+    --color-tertiary: #800080;
+    --color-quaternary: #9370db;
+    --color-quinary: #a020f0;
+  }
+
+  [data-theme='Gray'] {
+    --color-text: #ecececec;
+    --color-text-hover: #b4b4b4b4;
+    --color-link: #a9a9a9;
+    --color-link-hover: #c0c0c0;
+    --color-page-bg: #2f4f4f;
+    --color-content-bg: #696969;
+    --color-main-content-bg: #808080;
+    --color-input-bg: #f0f0f0;
+    --color-input-text: #0f0f0f;
+    --color-button-bg: #a9a9a9;
+    --color-button-bg-hover: #c0c0c0;
+    --color-button-outline: #a9a9a9;
+    --color-button-text: #f0f0f0;
+
+    --color-primary: #2f4f4f;
+    --color-secondary: #696969;
+    --color-tertiary: #808080;
+    --color-quaternary: #a9a9a9;
+    --color-quinary: #c0c0c0;
+  }
+}
+
+/**
+ * TODO: Do we have to set a default value (--tw-duration) for every utility class we use?
+ * Then what's the point of having a default value as a variable?
+ */
+@layer utilities {
+  .transition-colors {
+    --tw-duration: 1000;
+  }
+}
+
+/**
+* Tailwinds CSS Media Queries / Breakpoints
+*
+sm = 40rem = 640px
+md = 48rem = 768px
+lg = 64rem = 1024px
+xl = 80rem = 1280px
+2xl = 96rem = 1536px
+
+sm	@media (width >= 40rem)
+md	@media (width >= 48rem)
+lg	@media (width >= 64rem)
+xl	@media (width >= 80rem)
+2xl	@media (width >= 96rem)
+min-[...]	@media (width >= ...)
+
+max-sm	@media (width < 40rem)
+max-md	@media (width < 48rem)
+max-lg	@media (width < 64rem)
+max-xl	@media (width < 80rem)
+max-2xl	@media (width < 96rem)
+max-[...]	@media (width < ...)
+
+@3xs	@container (width >= 16rem)
+@2xs	@container (width >= 18rem)
+@xs	@container (width >= 20rem)
+@sm	@container (width >= 24rem)
+@md	@container (width >= 28rem)
+@lg	@container (width >= 32rem)
+@xl	@container (width >= 36rem)
+@2xl	@container (width >= 42rem)
+@3xl	@container (width >= 48rem)
+@4xl	@container (width >= 56rem)
+@5xl	@container (width >= 64rem)
+@6xl	@container (width >= 72rem)
+@7xl	@container (width >= 80rem)
+@min-[...]	@container (width >= ...)
+
+@max-3xs	@container (width < 16rem)
+@max-2xs	@container (width < 18rem)
+@max-xs	@container (width < 20rem)
+@max-sm	@container (width < 24rem)
+@max-md	@container (width < 28rem)
+@max-lg	@container (width < 32rem)
+@max-xl	@container (width < 36rem)
+@max-2xl	@container (width < 42rem)
+@max-3xl	@container (width < 48rem)
+@max-4xl	@container (width < 56rem)
+@max-5xl	@container (width < 64rem)
+@max-6xl	@container (width < 72rem)
+@max-7xl	@container (width < 80rem)
+@max-[...]	@container (width < ...)
+*/

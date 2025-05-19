@@ -1,0 +1,265 @@
+@font-face {
+  font-family Roboto
+  font-style normal
+  font-weight 100 900
+  font-display swap
+  src url(../fonts/Roboto-VariableFont_wdth,wght.ttf) format('truetype')
+}
+
+/*
+ * Colors from https://www.needsomefun.net/41-best-parks-and-recreation-tv-show-quotes/
+ *
+ * bg-colors: #333333, #1a1a1a, #ccc, #000, #262626
+ * text-color: #fff
+ * text-hover-color: #808080
+ * Transition hover-color: color 375ms ease-in-out
+ *
+ */
+
+body
+  margin .5rem
+  font-size 16px
+  font-family Roboto, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif
+  background-color #0f0f0f
+  color #ecececec
+
+.header
+  display flex
+  flex-direction column
+  margin 0 auto
+  border-bottom 1px solid #242424
+
+.main-nav
+  display flex
+  justify-content space-between
+  align-items center
+  margin 1rem 0
+
+  .breadcrumbs, .auth
+    font-size 1rem
+    background-color #1a1a1a
+    padding .25rem .5rem
+    border-radius .25rem
+
+.main
+  display flex
+  flex-direction column
+  margin 1rem auto
+
+.footer
+  display flex
+  flex-direction column
+  margin 0 auto
+  border-top 1px solid #242424
+
+  .wrapper
+    display flex
+    justify-content space-between
+    align-items center
+    margin 1rem 0
+
+@media (min-width 576px)
+  .header, .main, .footer
+    max-width 540px
+
+@media (min-width 768px)
+  .header, .main, .footer
+    max-width 720px
+
+@media (min-width 992px)
+  .header, .main, .footer
+    max-width 960px
+
+@media (min-width 1200px)
+  .header, .main, .footer
+    max-width 1140px
+
+.user-msg
+  padding 1rem
+  margin-bottom 1rem
+  border-radius .25rem
+  font-weight 600
+
+.bg-dark
+  background-color #212529
+
+.text-muted
+  color #777
+
+.text-primary
+  color #337ab7
+
+.text-success
+  color #3c763d
+
+.text-info
+  color #31708f
+
+.text-warning
+  color #8a6d3b
+
+.text-danger
+  color #dc3545
+
+.text-danger-clear
+  color #dc3545
+
+.text-danger-muted
+  color #a94442
+
+section
+  line-height 1.5px
+  background-color rgba(0, 0, 0, .24)
+  border-color rgba(0, 0, 0, 0.06)
+  border-radius .25rem
+  color #fff
+  padding 1rem .5rem
+  margin 0
+
+table, tr
+  margin 0
+  padding 0
+
+table.show
+  width 100%
+
+tr.heading
+  text-align center
+
+td, td.button, th
+  font-family inherit
+  font-size inherit
+  line-height 1.5
+  padding .5rem
+  white-space nowrap
+
+td.heading
+  width 10%
+
+td.content
+  // width 90%
+
+td.button
+  padding-top .5rem
+
+td.button--right
+  text-align right
+
+.show .content div
+  white-space normal
+  border-radius 0.25rem
+  padding 0.25rem 0.5rem
+  box-shadow 0 .25rem 1.5rem purple
+
+label
+  font-weight 600
+
+input, textarea, select
+  background-color rgba(255, 255, 255, .09)
+  border 0 none
+  font-family inherit
+  font-size inherit
+  line-height 1.5
+  color #fff
+  border-radius .25rem
+  margin 0
+  padding .25rem .5rem
+  box-shadow 0 .25rem 1.5rem purple
+  text-shadow none
+  outline 2px solid rgba(255, 255, 255, .24)
+  cursor pointer
+
+input:hover, textarea:hover, select:hover
+  outline-color rgba(255, 255, 255, .2)
+
+input:focus, textarea:focus, select:focus
+  outline-color #007bff
+
+input:not([type=checkbox]):not([type=radio]), textarea
+  width 300px
+  td.content &
+    width 100%
+
+input[type=checkbox], input[type=radio]
+  width 1rem
+  height 1rem
+  appearance none
+  cursor pointer
+  position relative
+
+input[type=radio]
+  border-radius 50%
+
+input[type=checkbox]:after, input[type=radio]:after
+  content ''
+  position absolute
+  line-height 1
+
+input[type=checkbox]:checked:after
+  content '✓'
+  top -9px
+  left 0
+  font-size 28px
+
+input[type=radio]:checked:after
+  content '⊚'
+  top 0
+  left 1px
+  font-size 16px
+
+// textarea
+  // height auto
+  // height 3lh + .5rem
+
+button, .link-button
+  font-family inherit
+  font-size inherit
+  display inline-block
+  line-height 1.5
+  border 0 none
+  outline 0 none
+  padding .25rem .5rem
+  background-color #007bff
+  color white
+  box-shadow 0 .25rem 1.5rem purple
+  text-shadow none
+  text-decoration none
+  border-radius .25rem
+  cursor pointer
+  transition background-color 0.1s
+  white-space nowrap
+
+button:hover, .link-button:hover,
+button:focus, .link-button:focus
+  background-color #0056b3
+
+button:active, .link-button:active
+  background-color #007bff
+
+h2
+  margin-left .75rem
+
+a, a:visited
+  color rgba(255, 255, 255, .95)
+  text-decoration none
+  border 0 none
+  outline 0 none
+
+a:hover, a:focus:hover, a:focus-visible:hover
+  color rgba(204, 204, 204, .95)
+
+a:focus, a:focus-visible
+  color rgba(204, 204, 204 .75)
+  // color #cccccc80
+  // color rgba(204, 204, 204, .5)
+  // color hsl(0 0 80 / .5)
+
+p
+  margin 0
+  padding 0
+
+ul, li
+  margin 0
+
+ul
+  padding-left 1rem

@@ -1,0 +1,24 @@
+{
+  "name": "scribble-laravel-react-ts",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "axios": "^1.7.4",
+    "concurrently": "^9.0.1",
+    "laravel-vite-plugin": "^1.2.0",
+    "stylus": "^0.64.0",
+    "vite": "^6.0.11"
+  },
+  "prettier": {
+    "tabWidth": 2
+  },
+  "engines": {
+    "node": "22.14.0",
+    "npm": "11.2.0"
+  }
+}
