@@ -1,14 +1,14 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindCss from '@tailwindcss/vite'
-import path from 'node:path'
+// import path from 'node:path'
 
 // https://vite.dev/config/
 /** @type {import('vite').UserConfig} */
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, path.join(process.cwd(), 'server'), '')
+  const env = loadEnv(mode, process.cwd(), '')
   return {
-    base: '/frontend/',
+    base: '/',
     build: {
       outDir: 'frontend',
       // outDir: '../public/frontend', // For when it's moved to Laravel structure
@@ -26,11 +26,11 @@ export default defineConfig(({ mode }) => {
       // host: 'localhost', // 0.0.0.0 for all interfaces
       proxy: {
         '/api': {
-          target: `http://localhost:${env.PORT}`, // Local API during dev
+          target: `http://localhost:${env.API_PORT}`, // Local API during dev
           changeOrigin: true,
         },
       },
-      port: 5002,
+      port: env.VITE_PORT,
       // allowedHosts: ['127.0.0.1', '192.168.32.2', 'grunge', 'grungecorp', 'grunge.dev', 'grungecorp.dev'],
       watch: {
         ignored: ['**/api-data/*.*', './TODO.txt'],
